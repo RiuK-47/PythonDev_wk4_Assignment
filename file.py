@@ -21,28 +21,4 @@ except FileNotFoundError:
 except PermissionError:
     print("Error: Permission denied to read the file.")
 except Exception as e:
-    # Instructions to push the code to GitHub
-    # 1. Initialize a Git repository in the project directory
-    # 2. Add the file to the staging area
-    # 3. Commit the changes with a message
-    # 4. Add the remote repository URL
-    # 5. Push the changes to the remote repository
-
-
-    # Define the Git commands
-    commands = [
-        "git init",
-        "git add .",
-        'git commit -m "Initial commit"',
-        "git remote add origin <your-repository-url>",
-        "git branch -M main",
-        "git push -u origin main"
-    ]
-
-    try:
-        # Execute each command
-        for command in commands:
-            os.system(command)
-        print("Code pushed to GitHub successfully.")
-    except Exception as e:
-        print("An error occurred while pushing the code to GitHub:", str(e))  
+    print("An unexpected error occurred:", str(e)) 
